@@ -1,0 +1,25 @@
+LANGKAH - LANGKAH MENJALANKAN PROGRAM 
+
+1. Install pytesseract di perangkat anda
+- Paya lampirkan link downloadnya : 
+https://github.com/tesseract-ocr/tesseract/releases/download/5.5.0/tesseract-ocr-w64-setup-5.5.0.20241111.exe
+- Catat Path: Secara default, Tesseract akan terinstal di:
+C:\Program Files\Tesseract-OCR\tesseract.exe
+- Pastikan saat instalasi, centang pilihan Additional script data dan Additional language data
+
+2. Selanjutnya install requirements.txt
+=> python -m venv venv
+=> venv\Scripts\activate
+=> pip install -r requirements.txt 
+
+3. Konfigurasi API AZURE yang terdapat di kode guardian_sider.pytesseract
+
+4. Setelah mengikuti langkah diatas, jalankan perintah :
+=> python guardian_sider.py
+
+
+
+CATATAN :
+1. Saya lampirkan folder "model-training" yang berisi dataset dan file .ipynb
+link sumber dataset : https://www.kaggle.com/datasets/yaemico/judionline?resource=download
+2. Saya lampirkan folder "result-program" yang berisi hasil cara kerja sistem 
