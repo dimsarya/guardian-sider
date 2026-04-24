@@ -6,7 +6,7 @@
 | :----: | :----------------: | :--------------------------: |
 | **No** |      **Nama**      |      **Email Dicoding**      |
 |    1   |  RUDY EKO PRASETYA | rudyekoprasetya\@yahoo.co.id |
-|    2   | DIMAS ARYA PRATAMA |      da836298\@gmai.com      |
+|    2   | DIMAS ARYA PRATAMA |      da836298\@gmail.com      |
 
 
 ### Topik : Digital Finance
