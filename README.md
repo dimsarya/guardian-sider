@@ -30,6 +30,8 @@ Pengoperasian Guardian Sider dimulai dengan mengeksekusi skrip utama di lingkung
 
 Setiap kali analisis model lokal menemukan ambiguitas atau ambang batas probabilitas yang menunjukkan keraguan, sistem cerdas akan mengirimkan data ke Keamanan Konten Azure AI untuk verifikasi tambahan. Setiap konten dievaluasi dengan tingkat akurasi yang lebih tinggi untuk menghindari kesalahan deteksi berkat integrasi kecerdasan buatan berbasis cloud ini. Guardian Sider akan segera mengirimkan peringatan formal pada layar pengguna jika sistem hibrida ini mengonfirmasi bahwa konten yang ditampilkan di layar mengandung unsur judi online. Ini akan memberikan informasi tentang potensi ancaman untuk menjaga keamanan ekosistem digital secara real-time. 
 
+## Gambar alur sistem
+![Alur](https://i.ibb.co.com/3yLdqSt9/7b31681c-ed15-4c8a-92d9-f218d4b134ec.png)
 
 
 |                  |                             |                                                                                                                  |
@@ -47,35 +49,41 @@ Setiap kali analisis model lokal menemukan ambiguitas atau ambang batas probabil
    git clone https://github.com/dimsarya/guardian-sider.git
 ```
 
-2. Masuk ke project 
+2. Install Tesseract di sistem anda
+```bash
+https://github.com/tesseract-ocr/tesseract/releases/download/5.5.0/tesseract-ocr-w64-setup-5.5.0.20241111.exe 
+```
+*Catat Path: Secara default, Tesseract akan terinstal di: C:\Program Files\Tesseract-OCR\tesseract.exe*,  **Pastikan saat instalasi, centang pilihan Additional script data dan Additional language data**
+
+3. Masuk ke project 
 ```bash
 cd guardian-sider
 ```
 
-3. Buat Environment
+4. Buat Environment
 
 ```bash
 python -m venv venv
 ```
 
-4. Aktivasi Virtual environment
+5. Aktivasi Virtual environment
 ```bash
 source venv/bin/activate
 ```
 
-5. Lakukan install library
+6. Lakukan install library
 
 ```bash
 pip install -r requiremenst.txt
 ```
 
-6. Jalankan aplikasi
+7. Jalankan aplikasi
 
 ```bash
 python3 guardian_sider.py
 ```
 
-7. Setelah skrip berjalan, berikut adalah apa yang terjadi di balik layar
+8. Setelah skrip berjalan, berikut adalah apa yang terjadi di balik layar
 
    1. **Background Capture:** Aplikasi menggunakan `PyAutoGUI` untuk mengambil gambar layar setiap 5 detik.
 
@@ -88,6 +96,10 @@ python3 guardian_sider.py
       2. _Hasil Ragu-ragu:_ Jika probabilitas antara 0.5 - 0.7, sistem mengirimkan teks ke **Azure AI Content Safety**.
 
    4. **Display Notification:** Jika terkonfirmasi berbahaya, sistem akan memanggil fungsi untuk memunculkan notifikasi pop-up di layar pengguna:
+
+**berikut hasilnya**
+
+![result](https://i.ibb.co.com/fVvphtFf/result-1.png)
 
 
 ### Rerefensi
